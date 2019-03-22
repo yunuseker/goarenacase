@@ -1,0 +1,4 @@
+#Fri Mar 22 16:54:13 EET 2019
+base.0=C\:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex

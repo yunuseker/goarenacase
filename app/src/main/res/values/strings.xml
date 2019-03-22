@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Go Arena Case</string>
+
+    <string name="common_exit">Çıkış</string>
+    <string name="common_ok">Tamam</string>
+    <string name="common_yes">Evet</string>
+    <string name="common_no">Hayır</string>
+    <string name="common_back">Geri</string>
+    <string name="common_add">Ekle</string>
+    <string name="common_delete">Sil</string>
+    <string name="common_remove">Kaldır</string>
+    <string name="btn_login">Giriş</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+</resources>
