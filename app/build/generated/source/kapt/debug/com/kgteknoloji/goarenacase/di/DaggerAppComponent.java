@@ -19,8 +19,9 @@ import com.kgteknoloji.goarenacase.ui.LoginAct;
 import com.kgteknoloji.goarenacase.ui.MainAct;
 import com.kgteknoloji.goarenacase.ui.ProfileFrg;
 import com.kgteknoloji.goarenacase.ui.TodoFrg;
+import com.kgteknoloji.goarenacase.usecase.GetProfileUseCase;
+import com.kgteknoloji.goarenacase.usecase.LoginUseCase;
 import com.kgteknoloji.goarenacase.usecase.TodoUsecase;
-import com.kgteknoloji.goarenacase.usecase.UserUsecase;
 import com.kgteknoloji.goarenacase.util.DateFormatter;
 import com.kgteknoloji.goarenacase.viewmodel.VMLoginAct;
 import com.kgteknoloji.goarenacase.viewmodel.VMLoginAct_Factory;
@@ -63,7 +64,9 @@ public final class DaggerAppComponent implements AppComponent {
 
   private Provider<UserRepository> provideUserRepositoryProvider;
 
-  private Provider<UserUsecase> provideUserUsecaseProvider;
+  private Provider<LoginUseCase> provideLoginUseCaseProvider;
+
+  private Provider<GetProfileUseCase> provideGetProfileUseCaseProvider;
 
   private Provider<TodoRepository> provideTodoRepositoryProvider;
 
@@ -140,9 +143,13 @@ public final class DaggerAppComponent implements AppComponent {
                 builder.repositoryModule,
                 provideApiServiceProvider,
                 providesSharedPreferencesProvider));
-    this.provideUserUsecaseProvider =
+    this.provideLoginUseCaseProvider =
         DoubleCheck.provider(
-            UsecaseModule_ProvideUserUsecaseFactory.create(
+            UsecaseModule_ProvideLoginUseCaseFactory.create(
+                builder.usecaseModule, provideUserRepositoryProvider));
+    this.provideGetProfileUseCaseProvider =
+        DoubleCheck.provider(
+            UsecaseModule_ProvideGetProfileUseCaseFactory.create(
                 builder.usecaseModule, provideUserRepositoryProvider));
     this.provideTodoRepositoryProvider =
         DoubleCheck.provider(
@@ -296,9 +303,9 @@ public final class DaggerAppComponent implements AppComponent {
     @SuppressWarnings("unchecked")
     private void initialize(final LoginActSubcomponentBuilder builder) {
       this.vMLoginActProvider =
-          VMLoginAct_Factory.create(DaggerAppComponent.this.provideUserUsecaseProvider);
+          VMLoginAct_Factory.create(DaggerAppComponent.this.provideLoginUseCaseProvider);
       this.vMProfileFrgProvider =
-          VMProfileFrg_Factory.create(DaggerAppComponent.this.provideUserUsecaseProvider);
+          VMProfileFrg_Factory.create(DaggerAppComponent.this.provideGetProfileUseCaseProvider);
       this.vMTodoFrgProvider =
           VMTodoFrg_Factory.create(DaggerAppComponent.this.provideTodoUsecaseProvider);
     }
@@ -380,9 +387,9 @@ public final class DaggerAppComponent implements AppComponent {
     @SuppressWarnings("unchecked")
     private void initialize(final MainActSubcomponentBuilder builder) {
       this.vMLoginActProvider =
-          VMLoginAct_Factory.create(DaggerAppComponent.this.provideUserUsecaseProvider);
+          VMLoginAct_Factory.create(DaggerAppComponent.this.provideLoginUseCaseProvider);
       this.vMProfileFrgProvider =
-          VMProfileFrg_Factory.create(DaggerAppComponent.this.provideUserUsecaseProvider);
+          VMProfileFrg_Factory.create(DaggerAppComponent.this.provideGetProfileUseCaseProvider);
       this.vMTodoFrgProvider =
           VMTodoFrg_Factory.create(DaggerAppComponent.this.provideTodoUsecaseProvider);
     }
@@ -447,9 +454,9 @@ public final class DaggerAppComponent implements AppComponent {
     @SuppressWarnings("unchecked")
     private void initialize(final ProfileFrgSubcomponentBuilder builder) {
       this.vMLoginActProvider =
-          VMLoginAct_Factory.create(DaggerAppComponent.this.provideUserUsecaseProvider);
+          VMLoginAct_Factory.create(DaggerAppComponent.this.provideLoginUseCaseProvider);
       this.vMProfileFrgProvider =
-          VMProfileFrg_Factory.create(DaggerAppComponent.this.provideUserUsecaseProvider);
+          VMProfileFrg_Factory.create(DaggerAppComponent.this.provideGetProfileUseCaseProvider);
       this.vMTodoFrgProvider =
           VMTodoFrg_Factory.create(DaggerAppComponent.this.provideTodoUsecaseProvider);
     }
@@ -512,9 +519,9 @@ public final class DaggerAppComponent implements AppComponent {
     @SuppressWarnings("unchecked")
     private void initialize(final TodoFrgSubcomponentBuilder builder) {
       this.vMLoginActProvider =
-          VMLoginAct_Factory.create(DaggerAppComponent.this.provideUserUsecaseProvider);
+          VMLoginAct_Factory.create(DaggerAppComponent.this.provideLoginUseCaseProvider);
       this.vMProfileFrgProvider =
-          VMProfileFrg_Factory.create(DaggerAppComponent.this.provideUserUsecaseProvider);
+          VMProfileFrg_Factory.create(DaggerAppComponent.this.provideGetProfileUseCaseProvider);
       this.vMTodoFrgProvider =
           VMTodoFrg_Factory.create(DaggerAppComponent.this.provideTodoUsecaseProvider);
     }

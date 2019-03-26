@@ -1,26 +1,26 @@
 [
     {
-        "merged": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\frg_todo.xml",
-        "source": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\src\\main\\res\\layout\\frg_todo.xml"
+        "merged": "/home/ozan/workspace/android/goarenacase/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/toolbar.xml",
+        "source": "/home/ozan/workspace/android/goarenacase/app/src/main/res/layout/toolbar.xml"
     },
     {
-        "merged": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\frg_profile.xml",
-        "source": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\src\\main\\res\\layout\\frg_profile.xml"
+        "merged": "/home/ozan/workspace/android/goarenacase/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/frg_profile.xml",
+        "source": "/home/ozan/workspace/android/goarenacase/app/src/main/res/layout/frg_profile.xml"
     },
     {
-        "merged": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\act_main.xml",
-        "source": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\src\\main\\res\\layout\\act_main.xml"
+        "merged": "/home/ozan/workspace/android/goarenacase/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_todo.xml",
+        "source": "/home/ozan/workspace/android/goarenacase/app/src/main/res/layout/item_todo.xml"
     },
     {
-        "merged": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_todo.xml",
-        "source": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\src\\main\\res\\layout\\item_todo.xml"
+        "merged": "/home/ozan/workspace/android/goarenacase/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/frg_todo.xml",
+        "source": "/home/ozan/workspace/android/goarenacase/app/src/main/res/layout/frg_todo.xml"
     },
     {
-        "merged": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\act_login.xml",
-        "source": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\src\\main\\res\\layout\\act_login.xml"
+        "merged": "/home/ozan/workspace/android/goarenacase/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/act_login.xml",
+        "source": "/home/ozan/workspace/android/goarenacase/app/src/main/res/layout/act_login.xml"
     },
     {
-        "merged": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\toolbar.xml",
-        "source": "C:\\Users\\yunusseker\\StudioProjects\\goarenacase\\app\\src\\main\\res\\layout\\toolbar.xml"
+        "merged": "/home/ozan/workspace/android/goarenacase/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/act_main.xml",
+        "source": "/home/ozan/workspace/android/goarenacase/app/src/main/res/layout/act_main.xml"
     }
 ]

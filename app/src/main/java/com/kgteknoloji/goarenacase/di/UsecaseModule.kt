@@ -2,8 +2,9 @@ package com.kgteknoloji.goarenacase.di
 
 import com.kgteknoloji.goarenacase.data.repository.TodoRepository
 import com.kgteknoloji.goarenacase.data.repository.UserRepository
+import com.kgteknoloji.goarenacase.usecase.GetProfileUseCase
+import com.kgteknoloji.goarenacase.usecase.LoginUseCase
 import com.kgteknoloji.goarenacase.usecase.TodoUsecase
-import com.kgteknoloji.goarenacase.usecase.UserUsecase
 import com.kgteknoloji.goarenacase.util.DateFormatter
 import dagger.Module
 import dagger.Provides
@@ -17,8 +18,14 @@ class UsecaseModule {
 
     @Provides
     @Singleton
-    fun provideUserUsecase(userRepository: UserRepository): UserUsecase {
-        return UserUsecase(userRepository)
+    fun provideGetProfileUseCase(userRepository: UserRepository): GetProfileUseCase {
+        return GetProfileUseCase(userRepository)
+    }
+
+    @Provides
+    @Singleton
+    fun provideLoginUseCase(userRepository: UserRepository): LoginUseCase {
+        return LoginUseCase(userRepository)
     }
 
     @Provides

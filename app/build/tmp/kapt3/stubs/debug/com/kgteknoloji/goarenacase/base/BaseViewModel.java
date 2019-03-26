@@ -26,9 +26,6 @@ public class BaseViewModel extends android.arch.lifecycle.ViewModel {
     protected void onCleared() {
     }
     
-    /**
-     * * use enum instead of static string message
-     */
     protected final void handleError(@org.jetbrains.annotations.NotNull()
     java.lang.Throwable error) {
     }

@@ -1,6 +1,5 @@
 package com.kgteknoloji.goarenacase.usecase
 
-import com.kgteknoloji.goarenacase.base.BaseUsecase
 import com.kgteknoloji.goarenacase.data.repository.TodoRepository
 import com.kgteknoloji.goarenacase.ui.viewentity.TodoViewEntity
 import com.kgteknoloji.goarenacase.util.DateFormatter
@@ -10,7 +9,7 @@ import javax.inject.Inject
 class TodoUsecase @Inject constructor(
     private val todoRepository: TodoRepository,
     private val dateFormatter: DateFormatter
-) : BaseUsecase() {
+) {
 
     fun getTodoList(): Observable<MutableList<TodoViewEntity>> {
         return todoRepository.getTodoList()
