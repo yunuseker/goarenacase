@@ -3,7 +3,6 @@ package com.kgteknoloji.goarenacase.base
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.google.gson.Gson
-import com.kgteknoloji.goarenacase.data.defination.ErrorType
 import com.kgteknoloji.goarenacase.data.dto.BaseError
 import io.reactivex.disposables.CompositeDisposable
 import retrofit2.HttpException
@@ -23,15 +22,12 @@ open class BaseViewModel : ViewModel() {
         super.onCleared()
     }
 
-    /**
-     * use enum instead of static string message
-     */
     protected fun handleError(error: Throwable) {
         if (error is HttpException) {
             val errorBody: String
             val baseError: BaseError?
             try {
-                errorBody = (error as HttpException).response().errorBody()!!.string()
+                errorBody = error.response().errorBody()!!.string()
                 baseError = Gson().fromJson<BaseError>(errorBody, BaseError::class.java)
 
                 errorMessage.postValue(baseError?.errorMessage)
