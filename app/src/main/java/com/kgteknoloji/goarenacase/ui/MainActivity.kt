@@ -3,16 +3,19 @@ package com.kgteknoloji.goarenacase.ui
 import android.arch.lifecycle.Observer
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
 import android.widget.TextView
 import com.kgteknoloji.goarenacase.R
 import com.kgteknoloji.goarenacase.base.BaseActivity
+import com.kgteknoloji.goarenacase.base.BaseFragment
 import com.kgteknoloji.goarenacase.databinding.ActivityMainBinding
 import com.kgteknoloji.goarenacase.viewmodel.VMMainAct
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.app_bar_main.view.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 
 class MainActivity : BaseActivity<ActivityMainBinding, VMMainAct>(), NavigationView.OnNavigationItemSelectedListener {
@@ -30,7 +33,8 @@ class MainActivity : BaseActivity<ActivityMainBinding, VMMainAct>(), NavigationV
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
-        loadFragment(R.id.container, TodoFrg.newInstance(), false)
+        showScreen(TodoFrg.newInstance(),R.string.title_notes)
+
         viewModel.showProfileInfo()
         subscribeMenuTitle()
         subscribeMenuSubTitle()
@@ -56,14 +60,23 @@ class MainActivity : BaseActivity<ActivityMainBinding, VMMainAct>(), NavigationV
         })
     }
 
+    private fun showScreen(fragment: Fragment, titleResId:Int){
+        loadFragment(R.id.container, fragment, false)
+        binding.appbar.toolbar.title = getString(titleResId)
+    }
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.notes -> {
-                loadFragment(R.id.container, TodoFrg.newInstance(), false)
+                showScreen(TodoFrg.newInstance(),R.string.title_notes)
             }
 
             R.id.profile -> {
-                loadFragment(R.id.container, ProfileFrg.newInstance(), false)
+                showScreen(ProfileFrg.newInstance(),R.string.profile)
+            }
+
+            R.id.faq -> {
+                showScreen(FaqFrg(),R.string.title_faq)
             }
         }
 

@@ -10,4 +10,10 @@
             android:icon="@drawable/ic_note"
             android:title="@string/title_notes"
     />
+
+    <item
+            android:id="@+id/faq"
+            android:icon="@drawable/ic_question_sign"
+            android:title="@string/title_faq"
+    />
 </menu>
