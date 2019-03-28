@@ -12,7 +12,7 @@ import com.kgteknoloji.goarenacase.viewmodel.VMTodoFrg
 class TodoFrg : BaseFragment<FrgTodoBinding, VMTodoFrg>() {
     companion object {
         fun newInstance(): TodoFrg {
-            val args: Bundle = Bundle()
+            val args = Bundle()
             val fragment = TodoFrg()
 
             fragment.arguments = args
@@ -31,7 +31,7 @@ class TodoFrg : BaseFragment<FrgTodoBinding, VMTodoFrg>() {
         viewModel.todoList.observe(this, Observer {
             adapter.setData(it)
         })
-        binding.btnProfile.setOnClickListener { (activity as MainAct).loadFragment(ProfileFrg.newInstance(),true)}
+//        binding.btnProfile.setOnClickListener { (activity as MainAct).loadFragment(ProfileFrg.newInstance(),true)}
     }
 
 }

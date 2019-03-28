@@ -1,7 +1,7 @@
 package com.kgteknoloji.goarenacase.di
 
 import com.kgteknoloji.goarenacase.ui.LoginAct
-import com.kgteknoloji.goarenacase.ui.MainAct
+import com.kgteknoloji.goarenacase.ui.MainActivity
 import com.kgteknoloji.goarenacase.ui.ProfileFrg
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -16,5 +16,5 @@ abstract class ActivityModule {
     internal abstract fun contLoginAct(): LoginAct
 
     @ContributesAndroidInjector(modules = arrayOf(ViewModelModule::class))
-    internal abstract fun contMainAct(): MainAct
+    internal abstract fun contMainActivity(): MainActivity
 }

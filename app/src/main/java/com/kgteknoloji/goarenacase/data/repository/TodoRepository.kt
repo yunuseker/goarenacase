@@ -6,7 +6,9 @@ import com.kgteknoloji.goarenacase.data.dto.TodoDto
 import io.reactivex.Observable
 import javax.inject.Inject
 
-class TodoRepository @Inject constructor(private val api: Api):BaseRepository(){
+class TodoRepository @Inject constructor(
+    private val api: Api
+):BaseRepository(){
 
     fun getTodoList(): Observable<MutableList<TodoDto>> {
         return api.getTodoList()

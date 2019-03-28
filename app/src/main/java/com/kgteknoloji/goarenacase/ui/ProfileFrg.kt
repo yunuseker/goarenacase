@@ -24,7 +24,6 @@ class ProfileFrg : BaseFragment<FrgProfileBinding, VMProfileFrg>() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        binding.btnBack.setOnClickListener { activity?.onBackPressed() }
         viewModel.getProfileData()
     }
 

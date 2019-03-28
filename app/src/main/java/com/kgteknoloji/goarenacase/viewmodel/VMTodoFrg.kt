@@ -16,7 +16,7 @@ class VMTodoFrg @Inject constructor(private val todoUsecase: TodoUsecase) : Base
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                todoList.value = it
+                todoList.postValue(it)
             }, {
                 handleError(it)
             })

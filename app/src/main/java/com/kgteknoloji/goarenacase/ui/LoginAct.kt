@@ -26,7 +26,7 @@ class LoginAct : BaseActivity<ActLoginBinding, VMLoginAct>() {
 
     private fun listenLoginSuccess() {
         viewModel.loginSuccess.observe(this, Observer {
-            val intent = Intent(this, MainAct::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
