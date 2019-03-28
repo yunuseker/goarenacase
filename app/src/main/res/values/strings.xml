@@ -9,7 +9,7 @@
     <string name="common_add">Ekle</string>
     <string name="common_delete">Sil</string>
     <string name="common_remove">Kaldır</string>
-    <string name="btn_login">Giriş</string>
-    <string name="hint_username">Username</string>
-    <string name="hint_password">Password</string>
+    <string name="btn_login">Giriş Yap</string>
+    <string name="hint_username">Kullanıcı Adı</string>
+    <string name="hint_password">Şifre</string>
 </resources>
