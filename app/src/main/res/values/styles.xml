@@ -60,4 +60,26 @@
 
     </style>
 
+
+    <style name="btn_action_gray">
+        <item name="android:background">@drawable/rounded_filter_clear_button</item>
+        <item name="android:fontFamily">@font/turkcellsatura_demi</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+
+    <style name="btn_action_yellow" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/rounded_yellow</item>
+        <item name="android:fontFamily">@font/turkcellsatura_demi</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/textColorDark</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
 </resources>

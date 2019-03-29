@@ -13,7 +13,6 @@ object ImageBindingAdapter {
     fun loadUrl(view: ImageView, url: String?) {
         val requestOptions = RequestOptions()
         val profileIconDrawable= view.context.getDrawable(R.drawable.ic_profile)
-        profileIconDrawable.setTint(ContextCompat.getColor(view.context,R.color.gray))
         requestOptions.placeholder(profileIconDrawable)
         requestOptions.error(profileIconDrawable)
         Glide.with(view.context)
