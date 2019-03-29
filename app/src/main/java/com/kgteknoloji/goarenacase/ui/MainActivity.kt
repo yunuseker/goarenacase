@@ -60,7 +60,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, VMMainAct>(), NavigationV
         })
     }
 
-    private fun showScreen(fragment: Fragment, titleResId:Int){
+    fun showScreen(fragment: Fragment, titleResId:Int){
         loadFragment(R.id.container, fragment, false)
         binding.appbar.toolbar.title = getString(titleResId)
     }
