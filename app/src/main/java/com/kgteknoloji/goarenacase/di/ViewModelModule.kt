@@ -33,5 +33,10 @@ abstract class ViewModelModule{
     internal abstract fun vmTodoFrg(vmTodoFrg: VMTodoFrg): ViewModel
 
     @Binds
+    @IntoMap
+    @ViewModelKey(VmFaq::class)
+    internal abstract fun VmFaq(vmTodoFrg: VmFaq): ViewModel
+
+    @Binds
     internal abstract fun bindViewModelFactory(factory: ViewModelFactory):ViewModelProvider.Factory
 }

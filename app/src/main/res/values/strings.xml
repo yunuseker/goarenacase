@@ -9,7 +9,19 @@
     <string name="common_add">Ekle</string>
     <string name="common_delete">Sil</string>
     <string name="common_remove">Kaldır</string>
-    <string name="btn_login">Giriş</string>
-    <string name="hint_username">Username</string>
-    <string name="hint_password">Password</string>
+    <string name="btn_login">Giriş Yap</string>
+    <string name="hint_username">Kullanıcı Adı</string>
+    <string name="hint_password">Şifre</string>
+    <string name="title_notes">Notlar</string>
+    <string name="navigation_drawer_open">Aç</string>
+    <string name="navigation_drawer_close">Kapat</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="profile">Profil</string>
+    <string name="title_faq">Sıkça Sorulan Sorular</string>
+    <string name="logout">Çıkış Yap</string>
+    <string name="warning_logout">Çıkış yapmak istediğinize emin misiniz?</string>
 </resources>
